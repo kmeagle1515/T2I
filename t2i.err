@@ -1,0 +1,2 @@
+/scratch/mnk2978/DL/MINIPROJ2/GAN-INT-CLS/Text-to-Image-Synthesis/trainer.py:17: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  config = yaml.load(f)
