@@ -14,7 +14,7 @@ import os
 class Trainer(object):
     def __init__(self, type, dataset, split, lr, diter, vis_screen, save_path, l1_coef, l2_coef, pre_trained_gen, pre_trained_disc, batch_size, num_workers, epochs):
         with open('config.yaml', 'r') as f:
-            config = yaml.load(f)
+            config = yaml.safe_load(f)
 
         self.generator = torch.nn.DataParallel(gan_factory.generator_factory(type).cuda())
         self.discriminator = torch.nn.DataParallel(gan_factory.discriminator_factory(type).cuda())
@@ -159,10 +159,10 @@ class Trainer(object):
 
                 gen_iteration += 1
 
-                self.logger.draw(right_images, fake_images)
+                #self.logger.draw(right_images, fake_images)
                 self.logger.log_iteration_wgan(epoch, gen_iteration, d_loss, g_loss, real_loss, fake_loss)
                 
-            self.logger.plot_epoch(gen_iteration)
+            #self.logger.plot_epoch(gen_iteration)
 
             if (epoch+1) % 50 == 0:
                 Utils.save_checkpoint(self.discriminator, self.generator, self.checkpoints_path, epoch)
@@ -251,9 +251,9 @@ class Trainer(object):
 
                 if iteration % 5 == 0:
                     self.logger.log_iteration_gan(epoch,d_loss, g_loss, real_score, fake_score)
-                    self.logger.draw(right_images, fake_images)
+                    #self.logger.draw(right_images, fake_images)
 
-            self.logger.plot_epoch_w_scores(epoch)
+            #self.logger.plot_epoch_w_scores(epoch)
 
             if (epoch) % 10 == 0:
                 Utils.save_checkpoint(self.discriminator, self.generator, self.checkpoints_path, self.save_path, epoch)
@@ -331,10 +331,10 @@ class Trainer(object):
 
              gen_iteration += 1
 
-             self.logger.draw(right_images, fake_images)
+             #self.logger.draw(right_images, fake_images)
              self.logger.log_iteration_wgan(epoch, gen_iteration, d_loss, g_loss, real_loss, fake_loss)
 
-         self.logger.plot_epoch(gen_iteration)
+         #self.logger.plot_epoch(gen_iteration)
 
          if (epoch + 1) % 50 == 0:
              Utils.save_checkpoint(self.discriminator, self.generator, self.checkpoints_path, epoch)
@@ -410,9 +410,9 @@ class Trainer(object):
 
                 if iteration % 5 == 0:
                     self.logger.log_iteration_gan(epoch, d_loss, g_loss, real_score, fake_score)
-                    self.logger.draw(right_images, fake_images)
+                    #self.logger.draw(right_images, fake_images)
 
-            self.logger.plot_epoch_w_scores(iteration)
+            #self.logger.plot_epoch_w_scores(iteration)
 
             if (epoch) % 50 == 0:
                 Utils.save_checkpoint(self.discriminator, self.generator, self.checkpoints_path, epoch)
@@ -434,7 +434,7 @@ class Trainer(object):
             noise = noise.view(noise.size(0), 100, 1, 1)
             fake_images = self.generator(right_embed, noise)
 
-            self.logger.draw(right_images, fake_images)
+            #self.logger.draw(right_images, fake_images)
 
             for image, t in zip(fake_images, txt):
                 im = Image.fromarray(image.data.mul_(127.5).add_(127.5).byte().permute(1, 2, 0).cpu().numpy())

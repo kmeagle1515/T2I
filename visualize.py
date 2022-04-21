@@ -1,3 +1,4 @@
+"""
 from visdom import Visdom
 import numpy as np
 import torchvision
@@ -7,8 +8,8 @@ import pdb
 
 class VisdomPlotter(object):
 
-    """Plots to Visdom"""
-
+    """#Plots to Visdom"""
+"""
     def __init__(self, env_name='gan'):
         self.viz = Visdom()
         self.env = env_name
@@ -30,3 +31,5 @@ class VisdomPlotter(object):
             self.plots[var_name] = self.viz.images(images, env=self.env)
         else:
             self.viz.images(images, env=self.env, win=self.plots[var_name])
+            
+"""            

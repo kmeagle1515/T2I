@@ -2,7 +2,7 @@ import numpy as np
 from torch import nn
 from torch import  autograd
 import torch
-from visualize import VisdomPlotter
+#from visualize import VisdomPlotter
 import os
 import pdb
 
@@ -102,7 +102,7 @@ class Utils(object):
 
 class Logger(object):
     def __init__(self, vis_screen):
-        self.viz = VisdomPlotter(env_name=vis_screen)
+        #self.viz = VisdomPlotter(env_name=vis_screen)
         self.hist_D = []
         self.hist_G = []
         self.hist_Dx = []
@@ -124,21 +124,21 @@ class Logger(object):
         self.hist_DGx.append(fake_score.data.cpu().mean())
 
     def plot_epoch(self, epoch):
-        self.viz.plot('Discriminator', 'train', epoch, np.array(self.hist_D).mean())
-        self.viz.plot('Generator', 'train', epoch, np.array(self.hist_G).mean())
+        #self.viz.plot('Discriminator', 'train', epoch, np.array(self.hist_D).mean())
+        #self.viz.plot('Generator', 'train', epoch, np.array(self.hist_G).mean())
         self.hist_D = []
         self.hist_G = []
 
     def plot_epoch_w_scores(self, epoch):
-        self.viz.plot('Discriminator', 'train', epoch, np.array(self.hist_D).mean())
-        self.viz.plot('Generator', 'train', epoch, np.array(self.hist_G).mean())
-        self.viz.plot('D(X)', 'train', epoch, np.array(self.hist_Dx).mean())
-        self.viz.plot('D(G(X))', 'train', epoch, np.array(self.hist_DGx).mean())
+        #self.viz.plot('Discriminator', 'train', epoch, np.array(self.hist_D).mean())
+        #self.viz.plot('Generator', 'train', epoch, np.array(self.hist_G).mean())
+        #self.viz.plot('D(X)', 'train', epoch, np.array(self.hist_Dx).mean())
+        #self.viz.plot('D(G(X))', 'train', epoch, np.array(self.hist_DGx).mean())
         self.hist_D = []
         self.hist_G = []
         self.hist_Dx = []
         self.hist_DGx = []
 
-    def draw(self, right_images, fake_images):
-        self.viz.draw('generated images', fake_images.data.cpu().numpy()[:64] * 128 + 128)
-        self.viz.draw('real images', right_images.data.cpu().numpy()[:64] * 128 + 128)
+    #def draw(self, right_images, fake_images):
+        #self.viz.draw('generated images', fake_images.data.cpu().numpy()[:64] * 128 + 128)
+        #self.viz.draw('real images', right_images.data.cpu().numpy()[:64] * 128 + 128)
