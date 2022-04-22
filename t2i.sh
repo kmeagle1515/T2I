@@ -2,7 +2,7 @@
 #SBATCH --job-name=t2i
 #SBATCH --nodes=1
 #SBATCH --cpus-per-task=16
-#SBATCH --time=02:00:00
+#SBATCH --time=04:00:00
 #SBATCH --mem=64GB
 #SBATCH --output=./t2i.out
 #SBATCH --error=./t2i.err
