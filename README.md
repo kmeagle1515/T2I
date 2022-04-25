@@ -22,16 +22,18 @@ This implementation follows the Generative Adversarial Text-to-Image Synthesis p
 - minibatch discrimination [2] (implemented but not used)
 - WGAN [3]
 - WGAN-GP [4] (implemented but not used)
+- SRCNN
+- GAN-BERT (implemented but not integrated)
 
 ## Datasets
 
-We used [Caltech-UCSD Birds 200](http://www.vision.caltech.edu/visipedia/CUB-200.html) and [Flowers](http://www.robots.ox.ac.uk/~vgg/data/flowers/102/) datasets, we converted each dataset (images, text embeddings) to hd5 format. 
+We used [Flowers](http://www.robots.ox.ac.uk/~vgg/data/flowers/102/) datasets, we converted each dataset (images, text embeddings) to hd5 format. 
 
 We used the [text embeddings](https://github.com/reedscot/icml2016) provided by the paper authors
 
 **To use this code you can either:**
 
-- Use the converted hd5 datasets,  [birds](https://drive.google.com/open?id=1mNhn6MYpBb-JwE86GC1kk0VJsYj-Pn5j), [flowers](https://drive.google.com/open?id=1EgnaTrlHGaqK5CCgHKLclZMT_AMSTyh8)
+- Use the converted hd5 datasets, [flowers](https://drive.google.com/open?id=1EgnaTrlHGaqK5CCgHKLclZMT_AMSTyh8)
 - Convert the data youself
   1. download the dataset as described [here](https://github.com/reedscot/cvpr2016)
   2. Add the paths to the dataset to `config.yaml` file.
@@ -50,7 +52,10 @@ We used the [text embeddings](https://github.com/reedscot/icml2016) provided by 
 ## Usage
 ### Training
 
-`python runtime.py
+```
+python runtime.py
+
+```
 
 **Arguments:**
 - `type` : GAN archiecture to use `(gan | wgan | vanilla_gan | vanilla_wgan)`. default = `gan`. Vanilla mean not conditional
@@ -75,9 +80,16 @@ We have used SRCNN (Super-Resolution Convolutional Neural Network) and Bicubic  
 
 Command:
 
-`python test.py --weights-file "BLAH_BLAH/srcnn_x3.pth" --image-file "data/a flower that has violet petals that are surrounding a cluster of stamen_.jpg” —scale 4'
 
-'python test.py --weights-file "BLAH_BLAH/srcnn_x3.pth" --image-file "data/this flower is white and trumpet shaped with yellow-green lines running from the center of the flowe.jpg" --scale 4'
+```
+python test.py --weights-file "BLAH_BLAH/srcnn_x3.pth" --image-file "data/a flower that has violet petals that are surrounding a cluster of stamen_.jpg” —scale 4
+
+```
+
+```
+'python test.py --weights-file "BLAH_BLAH/srcnn_x3.pth" --image-file "data/this flower is white and trumpet shaped with yellow-green lines running from the center of the flowe.jpg" --scale 4
+
+```
 
 ## GAN-Bert
 
