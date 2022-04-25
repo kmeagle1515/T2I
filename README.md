@@ -80,6 +80,12 @@ We have used SRCNN (Super-Resolution Convolutional Neural Network) and Bicubic  
 
 Command:
 
+```
+cd SRCNN
+```
+```
+cd SRCNN-pytorch
+```
 
 ```
 python test.py --weights-file "BLAH_BLAH/srcnn_x3.pth" --image-file "data/a flower that has violet petals that are surrounding a cluster of stamen_.jpg” —scale 4
@@ -93,7 +99,10 @@ python test.py --weights-file "BLAH_BLAH/srcnn_x3.pth" --image-file "data/this f
 
 ## GAN-Bert
 
-We have added GAN-BERT (implement, but not integrated)
+We have added GAN-BERT (implement, but not integrated) 
+```
+GANBERT_pytorch.ipynb
+```
 
 ## Result
 
