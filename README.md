@@ -87,7 +87,7 @@ python test.py --weights-file "BLAH_BLAH/srcnn_x3.pth" --image-file "data/a flow
 ```
 
 ```
-'python test.py --weights-file "BLAH_BLAH/srcnn_x3.pth" --image-file "data/this flower is white and trumpet shaped with yellow-green lines running from the center of the flowe.jpg" --scale 4
+python test.py --weights-file "BLAH_BLAH/srcnn_x3.pth" --image-file "data/this flower is white and trumpet shaped with yellow-green lines running from the center of the flowe.jpg" --scale 4
 
 ```
 
