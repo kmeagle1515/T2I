@@ -37,7 +37,7 @@ We used the [text embeddings](https://github.com/reedscot/icml2016) provided by 
 - Convert the data youself
   1. download the dataset as described [here](https://github.com/reedscot/cvpr2016)
   2. Add the paths to the dataset to `config.yaml` file.
-  3. Use [convert_cub_to_hd5_script](convert_cub_to_hd5_script.py) or [convert_flowers_to_hd5_script](convert_flowers_to_hd5_script.py) script to convert the dataset.
+  3. Use [convert_flowers_to_hd5_script](convert_flowers_to_hd5_script.py) script to convert the dataset.
   
 **Hd5 file taxonomy**
 `
