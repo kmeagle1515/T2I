@@ -69,6 +69,19 @@ We used the [text embeddings](https://github.com/reedscot/icml2016) provided by 
 - `epochs` : Number of training epochs. default=`200`
 - `cls`: Boolean flag to whether train with cls algorithms or not. default=`False`
 
+## Image Super Resolution
+
+We have used SRCNN (Super-Resolution Convolutional Neural Network) and Bicubic  interpolation inorder to enhance the generated image.
+
+Command:
+
+`python test.py --weights-file "BLAH_BLAH/srcnn_x3.pth" --image-file "data/a flower that has violet petals that are surrounding a cluster of stamen_.jpg” —scale 4'
+
+'python test.py --weights-file "BLAH_BLAH/srcnn_x3.pth" --image-file "data/this flower is white and trumpet shaped with yellow-green lines running from the center of the flowe.jpg" --scale 4'
+
+## GAN-Bert
+
+We have added GAN-BERT (implement, but not integrated)
 
 ## Result
 
