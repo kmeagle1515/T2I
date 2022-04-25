@@ -4,6 +4,9 @@
 
 This is a pytorch implementation of [Generative Adversarial Text-to-Image Synthesis paper](https://arxiv.org/abs/1605.05396), we train a conditional generative adversarial network, conditioned on text descriptions, to generate images that correspond to the description. The network architecture is shown below (Image from [1]). This architecture is based on DCGAN.
 
+<img width="1143" alt="image" src="https://user-images.githubusercontent.com/16959405/165022019-c1a75dba-4031-45c5-80c2-c0fbd4ba8a43.png">
+
+
 ## Requirements
 
 - pytorch 
@@ -121,7 +124,7 @@ We have received an inception score of 3.73
 
 
 ## References
-[1]  Generative Adversarial Text-to-Image Synthesis https://arxiv.org/abs/1605.05396
+[1]  Generative Adversarial Text-to-Image Synthesis https://arxiv.org/abs/1605.05396 
 
 [2]  Improved Techniques for Training GANs https://arxiv.org/abs/1606.03498
 
