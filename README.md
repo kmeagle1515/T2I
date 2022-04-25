@@ -73,22 +73,20 @@ We used the [text embeddings](https://github.com/reedscot/icml2016) provided by 
 - `cls`: Boolean flag to whether train with cls algorithms or not. default=`False`
 
 
-## Results
+## Result
 
-### Generated Images
+We have received an inception score of 3.73 
 
-<p align='center'>
-<img src='images/64_flowers.jpeg'>
-</p>
+<img width="903" alt="image" src="https://user-images.githubusercontent.com/16959405/165020421-5c7bdb00-42be-4dfd-b444-24a0461a7105.png">
 
-## Text to image synthesis
-| Text        | Generated Images  |
-| ------------- | -----:|
-| A blood colored pistil collects together with a group of long yellow stamens around the outside        | <img src='images/examples/a blood colored pistil collects together with a group of long yellow stamens around the outside whic.jpg'>  |
-| The petals of the flower are narrow and extremely pointy, and consist of shades of yellow, blue      | <img src='images/examples/the petals of the flower are narrow and extremely pointy, and consist of shades of yellow, blue and .jpg'>  |
-| This pale peach flower has a double row of long thin petals with a large brown center and coarse loo | <img src='images/examples/this pale peach flower has a double row of long thin petals with a large brown center and coarse loo.jpg'> |
-| The flower is pink with petals that are soft, and separately arranged around the stamens that has pi | <img src='images/examples/the flower is pink with petals that are soft, and separately arranged around the stamens that has pi.jpg'> |
-| A one petal flower that is white with a cluster of yellow anther filaments in the center | <img src='images/examples/a one petal flower that is white with a cluster of yellow anther filaments in the center.jpg'> |
+![image](https://user-images.githubusercontent.com/16959405/165020146-50f44691-0240-44c0-a0a3-9fd299d11cac.png)
+
+![image](https://user-images.githubusercontent.com/16959405/165020085-1090e101-0e26-4455-bfb1-ed401af9fa68.png)
+
+<img width="667" alt="image" src="https://user-images.githubusercontent.com/16959405/165020519-a4a25d9e-a5d9-4a10-b825-e463677bff3a.png">
+
+![plot_epoch_w_cores (1) (1)](https://user-images.githubusercontent.com/16959405/165020715-a0951c31-5c47-4175-94bb-4eb44fa32460.png)
+
 
 
 ## References
@@ -100,8 +98,3 @@ We used the [text embeddings](https://github.com/reedscot/icml2016) provided by 
 
 [4] Improved Training of Wasserstein GANs https://arxiv.org/pdf/1704.00028.pdf
 
-
-## Other Implementations
-
-1. https://github.com/reedscot/icml2016 (the authors version)
-2. https://github.com/paarthneekhara/text-to-image (tensorflow)
