@@ -132,3 +132,7 @@ We have received an inception score of 3.73
 
 [4] Improved Training of Wasserstein GANs https://arxiv.org/pdf/1704.00028.pdf
 
+[5] Image Super-Resolution Using DeepConvolutional Networks https://arxiv.org/pdf/1501.00092.pdf
+
+[6] https://github.com/crux82/ganbert-pytorch
+
